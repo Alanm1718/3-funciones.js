@@ -2,9 +2,12 @@
 
 // 1. Tu primera función
 // 1.1 Escribe una función llamada `despedir` que imprima "Adiós" en la consola.
-    function despedir(){
-        console.log(adios)
-    }
+   function despedir() {
+    const adios = "Adiós"; // DEFINIDO 'adios'
+    console.log(adios);
+}
+despedir(); 
+
 
 // 1.2 Crea una función llamada `multiplicarPorDos` que tome un número como parámetro y devuelva el doble de ese número.
     function multiplicarPorDos (numero){
@@ -148,20 +151,18 @@ console.log(factorial(0)); //  1
 
 // 5.4 Escribe una función recursiva que calcule la potencia de un número dado el exponente. Por ejemplo: `potencia(2, 3) -> 8`
 function potencia(base, exponente) {
-    function potencia(base, exponente) {
-        if (exponente === 0) {
-          return 1; 
-        } else if (exponente < 0) {
-          return 1 / potencia(base, -exponente); 
-        } else {
-          
-          return base * potencia(base, exponente - 1);
-        }
-      }
-      console.log(potencia(2, 3)); 
-      console.log(potencia(5, 0)); 
-      console.log(potencia(3, -2));   
+    if (exponente === 0) {
+        return 1; 
+    } else if (exponente < 0) {
+        return 1 / potencia(base, -exponente); 
+    } else {
+        return base * potencia(base, exponente - 1);
+    }
 }
+console.log(potencia(4, 2));  // Resultado: 16
+console.log(potencia(7, 0));  // Resultado: 1
+console.log(potencia(2, -3)); // Resultado: 0.125
+
 
 // Exportar las funciones para que puedan ser probadas
 module.exports = {
