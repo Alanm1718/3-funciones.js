@@ -140,17 +140,11 @@ function fibonacci(n) {
 
 // 5.3 Crea una función recursiva llamada `factorial` que calcule el factorial de un número. El factorial de n (n!) es el producto de todos los números enteros positivos menores o iguales a n.
 function factorial(n) {
-    function factorial(n) {
-        if (n === 0 || n === 1) {
-          return 1; 
-        } else {
-          return n * factorial(n - 1); 
-        }
-      }
-      console.log(factorial(5)); 
-      console.log(factorial(0)); 
-      console.log(factorial(1));     
+    return n <= 1 ? 1 : n * factorial(n - 1);
 }
+console.log(factorial(5)); // 120
+console.log(factorial(0)); //  1
+
 
 // 5.4 Escribe una función recursiva que calcule la potencia de un número dado el exponente. Por ejemplo: `potencia(2, 3) -> 8`
 function potencia(base, exponente) {
